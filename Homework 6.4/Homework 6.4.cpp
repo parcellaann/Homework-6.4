@@ -1,11 +1,33 @@
 ﻿// Homework 6.4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
+#define _CRT_SECURE_NO_WARNINGS
+#include <string.h>
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::cout << "Task 1.\n";
+
+	char str[100];
+	std::cin >> str;
+	int q = strlen(str);
+	for (int j = 0; j < q; j++)
+	{
+		str[j] = str[j + 1];
+	}
+	std::cout << str;
+
+
+	std::cout << "\n\nTask 2.\n";
+
+	char str1[100], temp[100];
+	std::cin >> str1;
+	strcpy(temp, str1);
+	for (int j = 0; j < strlen(str1); j++)
+	{
+		str1[j] = temp[strlen(str1) - 1 - j];
+	}
+	std::cout << str1;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
